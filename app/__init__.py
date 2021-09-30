@@ -10,7 +10,7 @@ mynotes = "database.db"
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = '123456'
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///database.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///mynotes'
     db.init_app(app)
 
     from .views import views
